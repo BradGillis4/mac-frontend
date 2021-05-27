@@ -1,0 +1,32 @@
+h1{
+color:red;
+}
+
+
+#product-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+img{
+    display: block;
+    height: 200px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.item-contain{
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid black;
+    text-align: center;
+    
+}
+
+button:hover{
+    color: blue;
+}
+body{
+    background-color: #add8e6;
+}

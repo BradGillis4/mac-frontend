@@ -1,15 +1,33 @@
-document.addEventListener("DOMContentLoaded", () => {
-    fetchProducts()
-})
+ let api = new ApiService
 
-function fetchProducts(){
-    const productsContainer = document.getElementById("product-container")
-fetch("http://127.0.0.1:3000/products")
-    .then(r => r.json())
-    .then(data => {
-        data.forEach(function(product){
-            productsContainer.innerHTML += `<li>${product.name}</li>`
+document.addEventListener('DOMContentLoaded', function(event) {
+    
+    api.getProducts()
+    .then(products =>  {
+        console.log(products)
+        products.forEach(product => {
+            
+            let name = document.createElement("p")
+            let image = document.createElement("img")
+            let price = document.createElement("p")
+            let description = document.createElement("p")
+            let addToCart = document.createElement("button")
+
+            price.innerHTML = product.price;
+            name.innerHTML = product.name;
+            image.setAttribute("src", product.product_img);
+            description.innerHTML = product.description;
+            addToCart.innerHTML = "Add to Cart";
+
+            let productContainer = document.createElement("div")
+            productContainer.classList.add("item-contain");
+            
+            productContainer.append(image, name, price, addToCart);
+            productContainerHover.append(description);
+
+            document.querySelector("#product-container").append(productContainer)
+
+            
         })
     })
-    .catch(err => console.warn(err))
-}
+})
