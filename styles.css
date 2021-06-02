@@ -30,3 +30,18 @@ button:hover{
 body{
     background-color: #add8e6;
 }
+
+#main{
+display:flex;
+}
+#cart-id{
+    min-width: 200px;
+    border: 2px solid black;
+    
+
+}
+
+
+#cart-id .item-contain button{
+    display:none;
+}
