@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
             addToCart.innerHTML = "Add to Cart";
 
             let productContainer = document.createElement("div")
+            
             productContainer.setAttribute("data-id", product.id);
             productContainer.setAttribute("data-name", product.name);
             productContainer.setAttribute("data-price", product.price);
