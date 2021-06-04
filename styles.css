@@ -24,6 +24,10 @@ img{
     
 }
 
+.item-contain .remove-from-cart{
+    display:none;
+}
+
 button:hover{
     color: blue;
 }
@@ -34,14 +38,18 @@ body{
 #main{
 display:flex;
 }
+
 #cart-id{
     min-width: 200px;
     border: 2px solid black;
-    
-
 }
 
 
-#cart-id .item-contain button{
+#cart-id .item-contain .add-to-cart{
     display:none;
+}
+
+#cart-id .item-contain .remove-from-cart{
+    display:block;
+    margin: auto;
 }

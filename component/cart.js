@@ -4,5 +4,4 @@ class Cart {
         this.totalPrice = total_price;
         this.id = id;
     }
-    
 }
