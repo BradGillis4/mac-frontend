@@ -40,7 +40,6 @@ class ApiService {
   }
 
   deleteFromCart(cartDivId) {
-    console.log("ethan");
     console.log(cartDivId);
     return fetch(`${this.baseUrl}/carts/${cartDivId}`, {
       method: "DELETE",

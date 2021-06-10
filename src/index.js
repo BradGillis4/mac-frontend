@@ -9,7 +9,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
       let price = document.createElement("p");
       let description = document.createElement("p");
       let addToCart = document.createElement("button");
+
       addToCart.classList.add("add-to-cart");
+
       addToCart.addEventListener("click", function (event) {
         let parentNode = event.target.parentNode;
         let productID = parentNode.getAttribute("data-id");
